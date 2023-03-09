@@ -1,0 +1,233 @@
+@font-face {
+    font-family: "PressStart2P-Regular";
+    src: url("./fonts/PressStart2P-Regular.ttf");
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+button {
+    font-family: "PressStart2P-Regular";
+}
+body {
+	margin: 0;
+	padding: 0;
+    background: linear-gradient(-45deg, #2980b9, #6dd5fa, #ffffff);
+    background-size: 400% 400%;
+    font-family: "PressStart2P-Regular";
+    background-repeat: repeat;
+    color: blueviolet;
+
+    animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+.container {
+    margin: 0 auto;
+    max-width: 1180px;
+    text-align: center;
+    }
+.main {
+    display: block;
+    font-size: 40px;
+    text-decoration: none;
+    color: blueviolet;
+}
+.wrapper {
+    margin-top: 300px;
+}
+.title {
+    text-align: center;
+    font-size: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.input-age {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    background-color: transparent;
+    color: blueviolet;
+    border: 1px solid;
+}
+.input-age:focus {
+    outline: none; /* Убираем контур */
+    border-color: rgb(255, 0, 170); /* Синяя рамка */
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+.button-age {
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    transition: .3s all;
+    background-color: blueviolet;
+    color: #fff;
+}
+.button-age:hover {
+    color: #fff;
+    background-color: rgb(255, 0, 170);
+}
+.form1s5 {
+    display: none;
+}
+.form-2 {
+    display: none;
+}
+.hr-message {
+    display: none;
+    font-size: 40px;
+    font-weight: 800;
+}
+.danger {
+    display: none;
+}
+.title-danger {
+    font-size: 30px;
+    font-weight: 800;
+    transition: all .3s;
+}
+@media (max-width: 768px) {
+    .title-danger {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+.char {
+    transform: translateY(115px);
+    transition: transform .5s;
+}
+.char-link {
+    transform: translateY(-115px);
+    transition: transform .5s;
+}
+#link .char{
+    transform: translateY(-115px);
+    transition: all .5s;
+    color: blueviolet;
+    
+}
+.content {
+    display: none;
+    overflow: hidden;
+    height: 100vh;
+}
+#title-danger {
+    transform: translateY(-115px);
+    transition: all .1s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    color: blueviolet;
+}
+.anima {
+    max-width: 589px;
+    height: auto;
+    position: relative;
+    z-index: -1;
+}
+.anima-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+    left: 10px;
+}
+.pony {
+    width: 400px;
+    height: auto;
+    position: relative;
+    z-index: -2;
+}
+.pony-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -2;
+    right: 1100px;
+}
+.mashroom {
+    width: 360px;
+    height: auto;
+    position: relative;
+}
+.mashroom-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: -344px;
+    top: -360px;
+}
+.block{
+    position: relative;
+    margin: 10% auto 0;
+    width: 500px;
+    height: 360px;
+    background: linear-gradient(0deg, #000, #272727);
+ }
+  
+.block:before,.block:after{
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    background: linear-gradient(45deg,rgba(241,196,15,1),rgba(69,167,63,1),rgba(57,172,113,1),
+      rgba(49,178,179,1), rgba(75,72,181,1),rgba(147,88,179,1),rgba(177,84,167,1),
+      rgba(174,68,84,1),rgba(177,84,167,1),rgba(147,88,179,1), rgba(75,72,181,1),
+      rgba(49,178,179,1),rgba(57,172,113,1),rgba(69,167,63,1),rgba(241,196,15,1));
+    background-size: 400%;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 10px;
+    z-index: -1;
+    animation: anim 20s linear infinite;
+}
+  
+@keyframes anim{
+    0%{
+      background-position: 0 0;
+    }
+    50%{
+      background-position: 300% 0;
+    }
+    100%{
+      background-position: 0 0;
+    }
+} 
+  
+.block:after{
+    filter: blur(30px);
+}
+@media (max-width: 500px) {
+    .anima-img {
+        top: 360px;
+    }
+    .block {
+        width: 390px;
+    }
+    iframe {
+        width: 390px;
+    }
+}  
